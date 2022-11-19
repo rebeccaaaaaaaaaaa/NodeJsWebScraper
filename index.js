@@ -7,6 +7,11 @@ const app = express();
 
 const url = 'https://www.capinhasnoatacado.com.br/fones'
 
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
 app.get('/', function (req, res) {
     res.json('This is my webscraper')
 })
